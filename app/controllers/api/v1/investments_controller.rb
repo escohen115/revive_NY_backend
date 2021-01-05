@@ -6,4 +6,5 @@ class Api::V1::InvestmentsController < ApplicationController
         
         render json: total_investments
     end 
+    
 end
