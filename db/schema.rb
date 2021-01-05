@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 2021_01_04_202829) do
 
   create_table "investments", force: :cascade do |t|
     t.string "description"
-    t.datetime "date"
     t.integer "amount"
     t.bigint "user_id", null: false
     t.bigint "business_id", null: false

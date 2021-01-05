@@ -1,5 +1,5 @@
 class Investment < ApplicationRecord
-  belongs_to :user
+  #belongs_to :user
   belongs_to :business
 
   def self.total_investments

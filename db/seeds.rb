@@ -30,8 +30,8 @@ end
         address: Faker::Address.full_address,
         phone_number: Faker::PhoneNumber.phone_number,
         # website: "www.example.com",
-        goal: rand(50000..1000000),
-        amount_raised: rand(500..20000),
+        goal: rand(500..10000),
+        amount_raised: 0,
         picture: 'https://www.ixxiyourworld.com/media/1676571/Mickey-Mouse-2.jpg?mode=crop&width=562&height=613'
     )
 
@@ -41,8 +41,7 @@ end
 20.times do
     investment = Investment.create!(
         description: 'hello',
-        date: Time.now,
-        amount: rand(10..1000000),
+        amount: rand(10..100),
         user_id: User.all.sample.id,
         business_id: Business.all.sample.id
     )
