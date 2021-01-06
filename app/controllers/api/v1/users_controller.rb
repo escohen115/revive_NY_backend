@@ -1,13 +1,26 @@
 class Api::V1::UsersController < ApplicationController
 
+    def index
+      users = User.all
+    end 
+
+    def sign_in
+        user = User.find_by(email: params[:email])
+        render json: user
+    end
+
 
     def create
         user = User.create!(strong_params)
         render json: user
     end
 
-    private
+    def investments
+        user = User.find_by(params[:user_id])
+       render json: user.investments
+    end 
 
+    private
     def strong_params
         params.permit(:name, :email)
     end
