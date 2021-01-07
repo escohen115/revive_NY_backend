@@ -23,6 +23,11 @@ class Api::V1::InvestmentsController < ApplicationController
         render json: investment
     end 
 
+    def destroy
+        investment = Investment.find(params[:id])
+        investment.destroy
+    end
+
     private
 
     def strong_params
