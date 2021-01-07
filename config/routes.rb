@@ -5,6 +5,13 @@ Rails.application.routes.draw do
       resources :investments
       resources :businesses
       resources :users
+
+      post 'users/sign_in', to: 'users#sign_in'
+      get 'investments/total_investments', to: 'investments#total_investments'
+      # get 'users/:id/investments', to: 'user#investments'
+      # get '/investments/:id', to: 'user#investments'
+
+
     end
   end
 

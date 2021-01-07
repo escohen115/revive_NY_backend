@@ -1,7 +1,12 @@
 class Api::V1::InvestmentsController < ApplicationController
 
     def index
-        # total_investments = Investment.sum(:amount)
+        investments = Investment.all  
+        
+        render json: investments
+    end 
+
+    def total_investments
         total_investments = Investment.total_investments
         
         render json: total_investments
