@@ -14,6 +14,8 @@ class Api::V1::InvestmentsController < ApplicationController
 
     def create
         investment = Investment.create!(strong_params)
+
+        render json: investment
     end
 
     def update
